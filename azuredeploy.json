@@ -3,12 +3,14 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "site_host_name": {
+            "DefaultValue": "node-demo-test-azure",
             "type": "String",
             "metadata": {
                 "description": "The host portion for the web app url (must be unique)."
             }
         },
         "app_svc_plan_name": {
+            "DefaultValue": "app-svc-node-test",
             "type": "String",
             "metadata": {
                 "description": "The name of your app service plan."
