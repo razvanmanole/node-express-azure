@@ -1,6 +1,18 @@
 trigger:
 - master
 
+- task: SonarSource.sonarqube.15B84CA1-B62F-4A2A-A403-89B77A063157.SonarQubePrepare@4
+  displayName: 'Prepare analysis on SonarQube'
+  inputs:
+    SonarQube: SonarQube
+    scannerMode: CLI
+    configMode: manual
+    cliProjectKey: 28afe2329d7bf78ccedc7be0ca2fe56616542870
+    cliProjectName: DemoNode
+    
+- task: SonarSource.sonarqube.6D01813A-9589-4B15-8491-8164AEB38055.SonarQubeAnalyze@4
+  displayName: 'Run Code Analysis'
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
@@ -17,18 +29,6 @@ steps:
 - script: |
     npm test
   displayName: 'npm test'
-  
-- task: SonarSource.sonarqube.15B84CA1-B62F-4A2A-A403-89B77A063157.SonarQubePrepare@4
-  displayName: 'Prepare analysis on SonarQube'
-  inputs:
-    SonarQube: SonarQube
-    scannerMode: CLI
-    configMode: manual
-    cliProjectKey: 28afe2329d7bf78ccedc7be0ca2fe56616542870
-    cliProjectName: DemoNode
-    
-- task: SonarSource.sonarqube.6D01813A-9589-4B15-8491-8164AEB38055.SonarQubeAnalyze@4
-  displayName: 'Run Code Analysis'
 
 - task: ArchiveFiles@2
   displayName: 'Archive files'
