@@ -3,14 +3,12 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "site_host_name": {
-            "defaultValue": "",
             "type": "String",
             "metadata": {
                 "description": "The host portion for the web app url (must be unique)."
             }
         },
         "app_svc_plan_name": {
-            "defaultValue": "",
             "type": "String",
             "metadata": {
                 "description": "The name of your app service plan."
