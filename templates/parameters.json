@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "6de167de-c89d-44e4-8d1a-d441cb3f8f07"
+        },
+        "name": {
+            "value": "node-express"
+        },
+        "location": {
+            "value": "West Europe"
+        },
+        "hostingEnvironment": {
+            "value": ""
+        },
+        "hostingPlanName": {
+            "value": "ASP-test-9b9b"
+        },
+        "serverFarmResourceGroup": {
+            "value": "test"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "skuCode": {
+            "value": "B1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "linuxFxVersion": {
+            "value": "NODE|lts"
+        }
+    }
+}
