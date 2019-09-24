@@ -17,6 +17,6 @@ steps:
     resourceGroupName: 'test'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: '.\template\template.json'
-    csmParametersFile: '.\template\patameters.json'
+    csmFile: '$(System.DefaultWorkingDirectory)/template/template.json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/template/patameters.json'
     deploymentMode: 'Complete'
