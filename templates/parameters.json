@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "site_host_name": {
-      "value": "node-demo-test-azure"
+      "value": "node-azure-demo-test-azure"
     },
     "app_svc_plan_name": {
-      "value": "app-svc-node-test"
+      "value": "app-svc-node-azure-test"
     }
   }
 }
