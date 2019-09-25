@@ -28,4 +28,14 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
   
-  
+- task: AzureResourceGroupDeployment@2
+  inputs:
+    azureSubscription: '03900346-5e19-46d2-b93b-3e67f4c04c56'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'test'
+    location: 'West Europe'
+    templateLocation: 'Linked artifact'
+    csmFile: './templates/template.json'
+    csmParametersFile: './templates/parameters.json'
+    deploymentMode: 'Complete'
+    
